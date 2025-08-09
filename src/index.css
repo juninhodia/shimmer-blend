@@ -109,3 +109,46 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Fundo do overlay do quiz, tom que combina com o background animado */
+  .quiz-overlay {
+    background: linear-gradient(180deg, rgba(22, 10, 40, 0.85), rgba(5, 8, 35, 0.85));
+    backdrop-filter: blur(6px);
+  }
+
+  /* Fundo do overlay de oferta (subindo de baixo para cima) */
+  .offer-overlay {
+    background: linear-gradient(180deg, rgba(10, 6, 24, 0.9), rgba(5, 8, 30, 0.9));
+    backdrop-filter: blur(8px);
+  }
+  /* Borda animada com gradiente cônico girando ao redor */
+  @property --angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+  }
+
+  @keyframes rotate-angle {
+    to {
+      --angle: 360deg;
+    }
+  }
+
+  .moving-border {
+    position: relative;
+    padding: 2px; /* espessura da linha */
+    border-radius: var(--radius);
+    background: conic-gradient(
+      from var(--angle),
+      hsl(var(--primary)),
+      hsl(var(--accent)),
+      hsl(var(--primary))
+    );
+    animation: rotate-angle 4s linear infinite;
+  }
+
+  .moving-border > * {
+    border-radius: inherit;
+  }
+}
