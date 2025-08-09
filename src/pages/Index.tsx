@@ -34,7 +34,7 @@ const Index = () => {
               <Button 
                 variant="hero" 
                 size="lg" 
-                className="w-full sm:w-auto text-base sm:text-lg px-12 py-4 min-h-[56px] hover:scale-105 transition-transform duration-200"
+                className="w-full sm:w-auto text-base sm:text-lg px-8 py-4 min-h-[56px] hover:scale-105 transition-transform duration-200"
               >
                 QUERO MEU ORÇAMENTO GRATUITO AGORA
               </Button>
@@ -42,7 +42,7 @@ const Index = () => {
               <Button 
                 variant="hero-outline" 
                 size="lg" 
-                className="w-full sm:w-auto text-base sm:text-lg px-12 py-4 min-h-[56px] hover:scale-105 transition-transform duration-200"
+                className="w-full sm:w-auto text-base sm:text-lg px-8 py-4 min-h-[56px] hover:scale-105 transition-transform duration-200"
               >
                 VER BENEFÍCIOS DE TER LANDING PAGE
               </Button>
