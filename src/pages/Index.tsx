@@ -2,6 +2,7 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEffect, useState } from "react";
+import chatfyLogo from "../../assets/Logo_chatfy-removebg-preview (1) - Copia.png";
 
 const Index = () => {
   const [quizOpen, setQuizOpen] = useState(false);
@@ -185,6 +186,12 @@ const Index = () => {
       <div className="absolute z-50 inset-0 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
+            {/* Logo acima do título principal */}
+            <img
+              src={chatfyLogo}
+              alt="Logo Chatfy"
+              className="mx-auto h-12 sm:h-16 w-auto drop-shadow-lg animate-fade-in"
+            />
             {/* Hero Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-hero-text leading-tight animate-fade-in">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-purple-200 drop-shadow-2xl">
@@ -204,9 +211,12 @@ const Index = () => {
                 <Button 
                   variant="hero" 
                   size="default" 
+                  asChild
                   className="w-full text-sm sm:text-lg px-4 sm:px-8 py-3 sm:py-4 min-h-[44px] sm:min-h-[56px] hover:scale-105 transition-transform duration-200"
                 >
-                  QUERO MEU ORÇAMENTO GRATUITO AGORA
+                  <a href="https://wa.me/5584999391928?text=Quero%20fazer%20um%20or%C3%A7amento%20de%20landing%20page" target="_blank" rel="noopener noreferrer">
+                    QUERO MEU ORÇAMENTO GRATUITO AGORA
+                  </a>
                 </Button>
               </div>
               
@@ -343,11 +353,15 @@ const Index = () => {
                       </div>
                     </div>
                     <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-                      <Button className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:from-primary/90 hover:to-accent/90 px-6 py-4 text-base rounded-lg shadow-lg">
-                        GARANTIR AGORA
+                      <Button className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:from-primary/90 hover:to-accent/90 px-6 py-4 text-base rounded-lg shadow-lg" asChild>
+                        <a href="https://wa.me/5584999391928?text=Quero%20fazer%20um%20or%C3%A7amento%20de%20landing%20page" target="_blank" rel="noopener noreferrer">
+                          GARANTIR AGORA
+                        </a>
                       </Button>
-                      <Button variant="hero-outline" className="px-6 py-4 text-base rounded-lg">
-                        FAZER ORÇAMENTO
+                      <Button variant="hero-outline" className="px-6 py-4 text-base rounded-lg" asChild>
+                        <a href="https://wa.me/5584999391928?text=Quero%20fazer%20um%20or%C3%A7amento%20de%20landing%20page" target="_blank" rel="noopener noreferrer">
+                          FAZER ORÇAMENTO
+                        </a>
                       </Button>
                     </div>
                   </div>
